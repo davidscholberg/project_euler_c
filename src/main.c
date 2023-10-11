@@ -9,21 +9,34 @@
 
 int main(int argc, char **argv)
 {
+    char *usage = "usage: %s [problem number]\n";
     if (argc != 2)
     {
+        printf("error: invalid number of arguments\n");
+        printf(usage, argv[0]);
         return EXIT_FAILURE;
     }
     int n = atoi(argv[1]);
-    if (n == 0)
+    if (n <= 0)
     {
+        printf("error: invalid problem number\n");
+        printf(usage, argv[0]);
         return EXIT_FAILURE;
     }
     char computed_answer[computed_answer_buffer_size];
     double time_taken;
-    if (!run_solver(n, computed_answer, computed_answer_buffer_size, &time_taken))
+    solver_status status = run_solver(n, computed_answer, computed_answer_buffer_size, &time_taken);
+    if (status == solver_not_found)
     {
+        printf("error: solver not found for problem %d\n", n);
         return EXIT_FAILURE;
     }
+    if (status == solver_failure)
+    {
+        printf("error: solver failed for problem %d\n", n);
+        return EXIT_FAILURE;
+    }
+    printf("problem %d\n", n);
     printf("time taken: %.3fs\n", time_taken);
     char *correct_answer = get_correct_answer(n);
     printf("computed answer: %s\n", computed_answer);
