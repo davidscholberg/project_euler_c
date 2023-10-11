@@ -6,6 +6,7 @@ enable_testing()
 
 add_executable(
     project_euler_c
+    src/answers.c
     src/main.c
     src/run_solver.c
     src/solvers/s0001.c
