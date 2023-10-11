@@ -19,10 +19,12 @@ int main(int argc, char **argv)
         return EXIT_FAILURE;
     }
     char computed_answer[computed_answer_buffer_size];
-    if (!run_solver(n, computed_answer, computed_answer_buffer_size))
+    double time_taken;
+    if (!run_solver(n, computed_answer, computed_answer_buffer_size, &time_taken))
     {
         return EXIT_FAILURE;
     }
+    printf("time taken: %.3fs\n", time_taken);
     char *correct_answer = get_correct_answer(n);
     printf("computed answer: %s\n", computed_answer);
     printf("correct answer:  %s\n", correct_answer);

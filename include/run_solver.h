@@ -2,4 +2,4 @@
 
 #include <stdbool.h>
 
-bool run_solver(int n, char *buffer, size_t buffer_size);
+bool run_solver(int n, char *buffer, size_t buffer_size, double *time_taken);
