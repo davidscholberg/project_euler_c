@@ -1,10 +1,10 @@
 #include <stdlib.h>
 
-#include "solutions.h"
+#include "solvers.h"
 
 typedef char *(*solve)();
 
-char *get_answer(int n)
+char *run_solver(int n)
 {
     solve solvers[] = {
         solve0001,

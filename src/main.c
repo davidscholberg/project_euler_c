@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "solutions.h"
+#include "run_solver.h"
 
 int main(int argc, char **argv)
 {
@@ -15,7 +15,7 @@ int main(int argc, char **argv)
         return EXIT_FAILURE;
     }
     // TODO: free answer once it changes to being malloced
-    char *answer = get_answer(n);
+    char *answer = run_solver(n);
     if (answer == NULL)
     {
         return EXIT_FAILURE;
