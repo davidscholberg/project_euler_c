@@ -3,6 +3,8 @@
 
 #include "run_solver.h"
 
+#define answer_buffer_size 50
+
 int main(int argc, char **argv)
 {
     if (argc != 2)
@@ -14,9 +16,8 @@ int main(int argc, char **argv)
     {
         return EXIT_FAILURE;
     }
-    // TODO: free answer once it changes to being malloced
-    char *answer = run_solver(n);
-    if (answer == NULL)
+    char answer[answer_buffer_size];
+    if (!run_solver(n, answer, answer_buffer_size))
     {
         return EXIT_FAILURE;
     }

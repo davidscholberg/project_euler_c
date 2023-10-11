@@ -1,10 +1,11 @@
+#include <stdbool.h>
 #include <stdlib.h>
 
 #include "solvers.h"
 
-typedef char *(*solve)();
+typedef bool (*solve)(char *, size_t);
 
-char *run_solver(int n)
+bool run_solver(int n, char *buffer, size_t buffer_size)
 {
     solve solvers[] = {
         solve0001,
@@ -13,7 +14,7 @@ char *run_solver(int n)
     n--;
     if (n >= size)
     {
-        return NULL;
+        return false;
     }
-    return solvers[n]();
+    return solvers[n](buffer, buffer_size);
 }

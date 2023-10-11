@@ -1,3 +1,5 @@
 #pragma once
 
-char *solve0001();
+#include <stdbool.h>
+
+bool solve0001(char *buffer, size_t buffer_size);
