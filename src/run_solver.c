@@ -9,6 +9,7 @@ bool run_solver(int n, char *buffer, size_t buffer_size)
 {
     solve solvers[] = {
         solve0001,
+        solve0002,
     };
     size_t size = sizeof(solvers) / sizeof(solve);
     n--;
