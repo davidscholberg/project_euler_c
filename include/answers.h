@@ -1,3 +1,3 @@
 #pragma once
 
-char *get_actual_answer(int n);
+char *get_correct_answer(int n);

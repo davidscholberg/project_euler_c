@@ -23,10 +23,10 @@ int main(int argc, char **argv)
     {
         return EXIT_FAILURE;
     }
-    char *actual_answer = get_actual_answer(n);
+    char *correct_answer = get_correct_answer(n);
     printf("computed answer: %s\n", computed_answer);
-    printf("actual answer:   %s\n", actual_answer);
-    if (strcmp(computed_answer, actual_answer))
+    printf("correct answer:  %s\n", correct_answer);
+    if (strcmp(computed_answer, correct_answer))
     {
         printf("❌ back to the drawing board");
     }
