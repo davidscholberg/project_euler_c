@@ -13,6 +13,7 @@ add_executable(
     src/solvers/s0002.c
     src/solvers/s0003.c
     src/solvers/s0004.c
+    src/solvers/s0005.c
     src/util/digits/palindromes.c
     src/util/primes/prime_factors.c
 )
