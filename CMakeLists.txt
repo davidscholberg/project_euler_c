@@ -15,8 +15,10 @@ add_executable(
     src/solvers/s0004.c
     src/solvers/s0005.c
     src/solvers/s0006.c
+    src/solvers/s0007.c
     src/util/digits/palindromes.c
     src/util/primes/prime_factors.c
+    src/util/primes/sieve_of_eratosthenes.c
 )
 target_compile_features(project_euler_c PUBLIC c_std_17)
 target_include_directories(
