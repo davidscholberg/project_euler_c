@@ -1,0 +1,23 @@
+add_library(
+    solvers
+    s0001.c
+    s0002.c
+    s0003.c
+    s0004.c
+    s0005.c
+    s0006.c
+    s0007.c
+    solvers.c
+)
+target_include_directories(
+    solvers
+    PUBLIC
+    include
+)
+target_link_libraries(
+    solvers
+    PRIVATE
+    digits
+    primes
+)
+target_compile_features(solvers PUBLIC c_std_17)

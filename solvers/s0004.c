@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #include "return_types.h"
-#include "util/digits/palindromes.h"
+#include "palindromes.h"
 
 #define digits_buffer_size 50
 

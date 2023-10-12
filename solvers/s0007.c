@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "util/primes/sieve_of_eratosthenes.h"
+#include "sieve_of_eratosthenes.h"
 
 #define nth 10001
 // this is the upper bound for the 10001st prime number, calculated via:

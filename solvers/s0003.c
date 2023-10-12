@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "util/primes/prime_factors.h"
+#include "prime_factors.h"
 
 #define prime_factor_buffer_size 50
 
