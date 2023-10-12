@@ -12,6 +12,8 @@ add_executable(
     src/solvers/s0001.c
     src/solvers/s0002.c
     src/solvers/s0003.c
+    src/solvers/s0004.c
+    src/util/digits/palindromes.c
     src/util/primes/prime_factors.c
 )
 target_compile_features(project_euler_c PUBLIC c_std_17)
@@ -19,5 +21,6 @@ target_include_directories(
     project_euler_c
     PUBLIC
     include
+    include/util/digits
     include/util/primes
 )

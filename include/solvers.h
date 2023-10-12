@@ -5,3 +5,4 @@
 bool solve0001(char *buffer, size_t buffer_size);
 bool solve0002(char *buffer, size_t buffer_size);
 bool solve0003(char *buffer, size_t buffer_size);
+bool solve0004(char *buffer, size_t buffer_size);
