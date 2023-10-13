@@ -8,6 +8,7 @@ add_library(
     s0006.c
     s0007.c
     s0008.c
+    s0009.c
     solvers.c
 )
 target_include_directories(
