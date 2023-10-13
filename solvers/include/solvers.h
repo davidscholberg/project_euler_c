@@ -17,3 +17,4 @@ bool solve0007(char *buffer, size_t buffer_size);
 bool solve0008(char *buffer, size_t buffer_size);
 bool solve0009(char *buffer, size_t buffer_size);
 bool solve0010(char *buffer, size_t buffer_size);
+bool solve0011(char *buffer, size_t buffer_size);
