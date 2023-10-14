@@ -4,6 +4,9 @@
 
 #define max_number 4000000
 
+// Solution for Project Euler problem 2.
+//
+// Compute the sum of the even-valued fibonacci numbers up to 4000000.
 bool solve0002(char *buffer, size_t buffer_size)
 {
     int sum = 0;

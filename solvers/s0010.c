@@ -8,6 +8,12 @@
 #define prime_bound 1999999
 #define composites_buffer_size prime_bound + 2
 
+// Solution for Project Euler problem 10.
+//
+// Find the sum of all the primes below two million.
+//
+// This solution is a pretty straightforward application of the sieve of
+// eratosthenes.
 bool solve0010(char *buffer, size_t buffer_size)
 {
     bool composites_buffer[composites_buffer_size];

@@ -1,9 +1,8 @@
 #include <stdlib.h>
 
-// Project Euler solutions collected by Luckytoilet and others.
+// Project Euler problem answers collected by Luckytoilet and others.
 // https://github.com/luckytoilet/projecteuler-solutions
 // https://www.tapatalk.com/groups/eulersolutionsfr/
-
 char *answers[] = {
     "233168",
     "4613732",

@@ -12,6 +12,16 @@
         b = a;          \
     }
 
+// Solution for Project Euler problem 11.
+//
+// Find the greatest product of four adjacent numbers in the same direction
+// (up, down, left, right, or diagonally) in the given 20x20 grid.
+//
+// The approach taken here is to simply iterate through the 2D grid and
+// calculate all possible adjacency products that start from each number. This
+// approach may not be as efficient as a ring buffer solution (like in solution
+// 8), but given that the iteration process would be much more complex for that
+// solution, I decided to take it easy on myself.
 bool solve0011(char *buffer, size_t buffer_size)
 {
     int grid[grid_length][grid_length] = {

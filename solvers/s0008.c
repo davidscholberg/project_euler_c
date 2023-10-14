@@ -6,6 +6,17 @@
 #define sliding_window_size 13
 #define ascii_digit_to_integer(a) a - 48
 
+// Solution for Project Euler problem 8.
+//
+// Find the thirteen adjacent digits in the given 1000-digit number that have
+// the greatest product and return that product.
+//
+// The approach taken here is to store and cycle through the integer digits of
+// the number using a ring buffer. Once the ring buffer is full, the program
+// keeps a running product variable that simply gets divided from and multiplied
+// to as the ring buffer moves through the digits of the number. If a zero digit
+// is encountered in the number, the ring buffer is "emptied" and refilled
+// starting from the digit after the zero.
 bool solve0008(char *buffer, size_t buffer_size)
 {
     char big_number_str[] =

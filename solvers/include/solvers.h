@@ -2,10 +2,21 @@
 
 #include <stdbool.h>
 
+// Function pointer type for solver functions.
+//
+// A solver function is a function that solves a specific project euler problem.
+// The inputs are a string buffer and size. The function is meant to write the
+// computed answer to the string buffer. The return value tells if the function
+// succeeded or not.
 typedef bool (*solve)(char *, size_t);
 
+// Array of all solver pointers.
 extern solve solvers[];
+
+// Size of the solvers array.
 extern size_t solvers_size;
+
+// All function declarations for implemented solvers should go below.
 
 bool solve0001(char *buffer, size_t buffer_size);
 bool solve0002(char *buffer, size_t buffer_size);

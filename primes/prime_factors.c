@@ -1,7 +1,6 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-// see sieve of eratothsenes
 void prime_factors(uint_fast64_t n, uint_fast64_t *buffer, size_t buffer_size, int *factor_count)
 {
     int buffer_index = 0;

@@ -7,6 +7,10 @@
 
 #define digits_buffer_size 50
 
+// Solution for Project Euler problem 4.
+//
+// Find the largest palindromic number made from the product of two 3-digit
+// numbers.
 bool solve0004(char *buffer, size_t buffer_size)
 {
     char digits_buffer[digits_buffer_size];

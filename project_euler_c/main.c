@@ -7,6 +7,11 @@
 
 #define computed_answer_buffer_size 50
 
+// Program entry point.
+//
+// The program expects a single argument which represents the project euler
+// problem to run the solution for. The program will run the solution for the
+// given problem and compare the computed answer to the correct one.
 int main(int argc, char **argv)
 {
     char *usage = "usage: %s [problem number]\n";

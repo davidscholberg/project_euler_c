@@ -7,6 +7,9 @@
 
 #define prime_factor_buffer_size 50
 
+// Solution for Project Euler problem 3.
+//
+// Find the largest prime factor of the number 600851475143.
 bool solve0003(char *buffer, size_t buffer_size)
 {
     uint_fast64_t n = 600851475143;

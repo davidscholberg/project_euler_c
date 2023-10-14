@@ -5,12 +5,20 @@
 #include "sieve_of_eratosthenes.h"
 
 #define nth 10001
-// this is the upper bound for the 10001st prime number, calculated via:
+// This is the upper bound for the 10001st prime number, calculated via:
 // n * math.ceil(math.log(n) + math.log(math.log(n)))
-// the above is good for n >=6
+// The above upper bound formula is good for n >=6.
 #define upper_bound 120012
 #define composites_buffer_size upper_bound + 2
 
+// Solution for Project Euler problem 7.
+//
+// Find the 10001st prime number.
+//
+// The approach taken here was to pre-calculate the upper bound of the 10001st
+// prime number using the formula above, calling the sieve_of_eratosthenes
+// function to calculate all prime numbers up to that upper bound, and then
+// counting the generated primes up to the 10001st.
 bool solve0007(char *buffer, size_t buffer_size)
 {
     bool composites_buffer[composites_buffer_size];
