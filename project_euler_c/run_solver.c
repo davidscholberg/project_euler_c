@@ -15,6 +15,6 @@ solver_status run_solver(int n, char *buffer, size_t buffer_size, double *time_t
     clock_t before = clock();
     bool success = solvers[n](buffer, buffer_size);
     clock_t after = clock();
-    *time_taken = (after - before) / CLOCKS_PER_SEC;
+    *time_taken = ((double)(after - before)) / CLOCKS_PER_SEC;
     return success ? solver_success : solver_failure;
 }
