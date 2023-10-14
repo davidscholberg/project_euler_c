@@ -14,6 +14,7 @@ solve solvers[] = {
     solve0009,
     solve0010,
     solve0011,
+    solve0012,
 };
 
 size_t solvers_size = sizeof(solvers) / sizeof(solve);
