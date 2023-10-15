@@ -32,5 +32,8 @@ void factors(uint_fast64_t n, uint_fast64_t *buffer, size_t buffer_size, int *fa
             }
         }
     }
-    write_factor_to_buffer(n);
+    if (n > 1)
+    {
+        write_factor_to_buffer(n);
+    }
 }
