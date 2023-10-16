@@ -22,12 +22,20 @@ Building the project will depend on how your development environment handles CMa
 
 ### Running Solutions
 
-After successfully building the project via CMake, you can run the solution for a particular problem by passing the problem number to the executable:
+You can run the solution for a particular problem by passing the problem number to the [solve script][solve-script]:
 
 ```bash
-./build/project_euler_c/project_euler_c 10
+./solve 10
 ```
 
-The executable runs the solution and compares the computed answer against the correct answer, the list of which was obtained from [luckytoilet/projecteuler-solutions][projecteuler-solutions].
+The script builds and launches the project, which runs the solver for the particular problem and compares the computed answer against the correct answer, the list of which was obtained from [luckytoilet/projecteuler-solutions][projecteuler-solutions].
 
+[solve-script]: solve
 [projecteuler-solutions]: https://github.com/luckytoilet/projecteuler-solutions
+
+### Running Tests
+
+This project manages unit tests via [CTest][ctest]. To run the unit tests, you can launch the tests from your IDE or run the [test script][test-script].
+
+[ctest]: https://cmake.org/cmake/help/book/mastering-cmake/chapter/Testing%20With%20CMake%20and%20CTest.html
+[test-script]: test
