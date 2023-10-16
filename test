@@ -1,3 +1,6 @@
 #!/usr/bin/env sh
 
+set -e
+
+cmake --build build --config Release --target all -j 14
 ctest -j14 -C Release --output-on-failure --test-dir build
