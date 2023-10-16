@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+cmake --build build --config Release --target project_euler_c -j 14
+./build/project_euler_c/project_euler_c "$@"
