@@ -30,3 +30,4 @@ bool solve0009(char *buffer, size_t buffer_size);
 bool solve0010(char *buffer, size_t buffer_size);
 bool solve0011(char *buffer, size_t buffer_size);
 bool solve0012(char *buffer, size_t buffer_size);
+bool solve0013(char *buffer, size_t buffer_size);

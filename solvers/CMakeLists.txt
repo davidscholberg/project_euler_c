@@ -12,12 +12,20 @@ add_library(
     s0010.c
     s0011.c
     s0012.c
+    s0013.c
     solvers.c
 )
+add_dependencies(
+    solvers
+    libgmp
+)
+ExternalProject_Get_Property(libgmp INSTALL_DIR)
 target_include_directories(
     solvers
     PUBLIC
     include
+    PRIVATE
+    ${INSTALL_DIR}/include
 )
 target_link_libraries(
     solvers
@@ -25,5 +33,7 @@ target_link_libraries(
     digits
     multiples
     primes
+    # TODO: currently this hardcoded library extention is a barrier to cross-platform builds
+    ${INSTALL_DIR}/lib/libgmp.a
 )
 target_compile_features(solvers PUBLIC c_std_17)
