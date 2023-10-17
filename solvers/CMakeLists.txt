@@ -13,6 +13,7 @@ add_library(
     s0011.c
     s0012.c
     s0013.c
+    s0014.c
     solvers.c
 )
 add_dependencies(
