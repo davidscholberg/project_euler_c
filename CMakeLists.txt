@@ -7,6 +7,7 @@ include_directories(include)
 
 add_subdirectory(digits)
 add_subdirectory(external)
+add_subdirectory(grids)
 add_subdirectory(multiples)
 add_subdirectory(primes)
 add_subdirectory(project_euler_c)

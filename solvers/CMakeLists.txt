@@ -14,6 +14,7 @@ add_library(
     s0012.c
     s0013.c
     s0014.c
+    s0015.c
     solvers.c
 )
 add_dependencies(
@@ -32,6 +33,7 @@ target_link_libraries(
     solvers
     PRIVATE
     digits
+    grids
     multiples
     primes
     # TODO: currently this hardcoded library extention is a barrier to cross-platform builds
