@@ -33,3 +33,4 @@ bool solve0012(char *buffer, size_t buffer_size);
 bool solve0013(char *buffer, size_t buffer_size);
 bool solve0014(char *buffer, size_t buffer_size);
 bool solve0015(char *buffer, size_t buffer_size);
+bool solve0016(char *buffer, size_t buffer_size);

@@ -3,8 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "digits.h"
+
 #define sliding_window_size 13
-#define ascii_digit_to_integer(a) a - 48
 
 // Solution for Project Euler problem 8.
 //
