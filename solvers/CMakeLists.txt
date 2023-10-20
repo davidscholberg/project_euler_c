@@ -16,6 +16,7 @@ add_library(
     s0014.c
     s0015.c
     s0016.c
+    s0017.c
     solvers.c
 )
 add_dependencies(

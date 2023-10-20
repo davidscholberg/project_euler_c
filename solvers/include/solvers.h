@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdbool.h>
+#include <stddef.h>
 
 // Function pointer type for solver functions.
 //
@@ -34,3 +35,4 @@ bool solve0013(char *buffer, size_t buffer_size);
 bool solve0014(char *buffer, size_t buffer_size);
 bool solve0015(char *buffer, size_t buffer_size);
 bool solve0016(char *buffer, size_t buffer_size);
+bool solve0017(char *buffer, size_t buffer_size);
