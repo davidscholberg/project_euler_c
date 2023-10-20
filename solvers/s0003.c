@@ -20,6 +20,6 @@ bool solve0003(char *buffer, size_t buffer_size)
     {
         return false;
     }
-    int ret = snprintf(buffer, buffer_size, "%d", prime_factor_buffer[factor_count - 1]);
-    return ret >= 0 && ret < buffer_size;
+    int ret = snprintf(buffer, buffer_size, "%lu", prime_factor_buffer[factor_count - 1]);
+    return ret >= 0 && (unsigned int)ret < buffer_size;
 }

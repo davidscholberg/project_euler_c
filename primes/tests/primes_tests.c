@@ -6,12 +6,12 @@
 #include "prime_factors.h"
 #include "sieve_of_eratosthenes.h"
 
-void prime_factors_test_case(int n, int *expected_factors, size_t expected_factor_count)
+void prime_factors_test_case(int n, unsigned int *expected_factors, size_t expected_factor_count)
 {
     uint_fast64_t prime_factors_buffer[expected_factor_count];
     int prime_factor_count;
     prime_factors(n, prime_factors_buffer, expected_factor_count, &prime_factor_count);
-    assert(prime_factor_count == expected_factor_count);
+    assert(prime_factor_count == (int)expected_factor_count);
     for (int i = 0; i < prime_factor_count; i++)
     {
         assert(expected_factors[i] == prime_factors_buffer[i]);
@@ -32,16 +32,16 @@ void sieve_test_case(int n, int *expected_primes, size_t expected_prime_count)
             prime_count++;
         }
     }
-    assert(expected_prime_count == prime_count);
+    assert((int)expected_prime_count == prime_count);
 }
 
 void test_prime_factors()
 {
-    prime_factors_test_case(1, (int[]){}, 0);
-    prime_factors_test_case(2, (int[]){2}, 1);
-    prime_factors_test_case(3, (int[]){3}, 1);
-    prime_factors_test_case(7919, (int[]){7919}, 1);
-    prime_factors_test_case(348349349, (int[]){15017, 23197}, 2);
+    prime_factors_test_case(1, (unsigned int[]){0}, 0);
+    prime_factors_test_case(2, (unsigned int[]){2}, 1);
+    prime_factors_test_case(3, (unsigned int[]){3}, 1);
+    prime_factors_test_case(7919, (unsigned int[]){7919}, 1);
+    prime_factors_test_case(348349349, (unsigned int[]){15017, 23197}, 2);
     uint_fast64_t buffer[1];
     int factor_count;
     prime_factors(6, buffer, 1, &factor_count);

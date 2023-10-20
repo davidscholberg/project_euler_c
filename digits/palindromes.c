@@ -7,7 +7,7 @@
 bool_or_error is_palindromic_number(int n, char *buffer, size_t buffer_size)
 {
     int digit_count = snprintf(buffer, buffer_size, "%d", n);
-    if (digit_count <= 0 || digit_count >= buffer_size)
+    if (digit_count <= 0 || (unsigned int)digit_count >= buffer_size)
     {
         return error_condition;
     }

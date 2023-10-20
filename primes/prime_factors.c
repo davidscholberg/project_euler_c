@@ -10,7 +10,7 @@ void prime_factors(uint_fast64_t n, uint_fast64_t *buffer, size_t buffer_size, i
     {
         if (n % potential_prime_factor == 0)
         {
-            if (buffer_index >= buffer_size)
+            if ((unsigned int)buffer_index >= buffer_size)
             {
                 *factor_count = -1;
                 return;

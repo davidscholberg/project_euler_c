@@ -44,5 +44,5 @@ bool solve0015(char *buffer, size_t buffer_size)
     };
     int_fast64_t result = path_count(&grid, &allowed_moves, &target, (coordinates){0, 0});
     int ret = snprintf(buffer, buffer_size, "%ld", result);
-    return ret >= 0 && ret < buffer_size;
+    return ret >= 0 && (unsigned int)ret < buffer_size;
 }

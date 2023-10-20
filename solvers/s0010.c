@@ -26,6 +26,6 @@ bool solve0010(char *buffer, size_t buffer_size)
             sum += i;
         }
     }
-    int ret = snprintf(buffer, buffer_size, "%lld", sum);
-    return ret >= 0 && ret < buffer_size;
+    int ret = snprintf(buffer, buffer_size, "%lu", sum);
+    return ret >= 0 && (unsigned int)ret < buffer_size;
 }

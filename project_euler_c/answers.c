@@ -864,10 +864,9 @@ char *answers[] = {
 
 size_t answers_size = sizeof(answers) / sizeof(char *);
 
-char *get_correct_answer(int n)
+char *get_correct_answer(unsigned int n)
 {
-    n--;
-    if (n < 0 || n >= answers_size)
+    if (n >= answers_size)
     {
         return "answer not found";
     }

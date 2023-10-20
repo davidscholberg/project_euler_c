@@ -46,7 +46,7 @@ bool solve0008(char *buffer, size_t buffer_size)
     uint_fast64_t product = 1;
     uint_fast64_t max_product = 1;
     int fill_counter = 0;
-    for (int i = 0; i < big_number_size; i++)
+    for (int i = 0; (unsigned int)i < big_number_size; i++)
     {
         if (big_number_str[i] == '0')
         {
@@ -79,6 +79,6 @@ bool solve0008(char *buffer, size_t buffer_size)
             }
         }
     }
-    int ret = snprintf(buffer, buffer_size, "%lld", max_product);
-    return ret >= 0 && ret < buffer_size;
+    int ret = snprintf(buffer, buffer_size, "%lu", max_product);
+    return ret >= 0 && (unsigned int)ret < buffer_size;
 }

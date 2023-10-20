@@ -2,17 +2,17 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#define write_factor_to_buffer(factor)   \
-    do                                   \
-    {                                    \
-        if (buffer_index >= buffer_size) \
-        {                                \
-            *factor_count = -1;          \
-            return;                      \
-        }                                \
-        buffer[buffer_index] = factor;   \
-        buffer_index++;                  \
-        (*factor_count)++;               \
+#define write_factor_to_buffer(factor)                 \
+    do                                                 \
+    {                                                  \
+        if ((unsigned int)buffer_index >= buffer_size) \
+        {                                              \
+            *factor_count = -1;                        \
+            return;                                    \
+        }                                              \
+        buffer[buffer_index] = factor;                 \
+        buffer_index++;                                \
+        (*factor_count)++;                             \
     } while (0)
 
 void factors(uint_fast64_t n, uint_fast64_t *buffer, size_t buffer_size, int *factor_count)

@@ -95,5 +95,5 @@ bool solve0011(char *buffer, size_t buffer_size)
         }
     }
     int ret = snprintf(buffer, buffer_size, "%d", max_product);
-    return ret >= 0 && ret < buffer_size;
+    return ret >= 0 && (unsigned int)ret < buffer_size;
 }

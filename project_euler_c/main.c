@@ -30,7 +30,7 @@ int main(int argc, char **argv)
     }
     char computed_answer[computed_answer_buffer_size];
     double time_taken;
-    solver_status status = run_solver(n, computed_answer, computed_answer_buffer_size, &time_taken);
+    solver_status status = run_solver(n - 1, computed_answer, computed_answer_buffer_size, &time_taken);
     if (status == solver_not_found)
     {
         printf("error: solver not found for problem %d\n", n);
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
     }
     printf("problem %d\n", n);
     printf("time taken: %.3fs\n", time_taken);
-    char *correct_answer = get_correct_answer(n);
+    char *correct_answer = get_correct_answer(n - 1);
     printf("computed answer: %s\n", computed_answer);
     printf("correct answer:  %s\n", correct_answer);
     if (strcmp(computed_answer, correct_answer))

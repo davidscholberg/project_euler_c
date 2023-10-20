@@ -25,5 +25,5 @@ bool solve0016(char *buffer, size_t buffer_size)
         digit_sum += ascii_digit_to_integer(power_str[i]);
     }
     int ret = snprintf(buffer, buffer_size, "%d", digit_sum);
-    return ret >= 0 && ret < buffer_size;
+    return ret >= 0 && (unsigned int)ret < buffer_size;
 }

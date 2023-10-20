@@ -22,7 +22,7 @@ bool solve0005(char *buffer, size_t buffer_size)
     while (1)
     {
         bool found = true;
-        for (int i = 0; i < factors_to_check_count; i++)
+        for (int i = 0; (unsigned int)i < factors_to_check_count; i++)
         {
             if (result % factors_to_check[i] != 0)
             {
@@ -37,5 +37,5 @@ bool solve0005(char *buffer, size_t buffer_size)
         result += 20;
     }
     int ret = snprintf(buffer, buffer_size, "%d", result);
-    return ret >= 0 && ret < buffer_size;
+    return ret >= 0 && (unsigned int)ret < buffer_size;
 }

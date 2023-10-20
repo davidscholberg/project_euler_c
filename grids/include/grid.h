@@ -24,9 +24,11 @@ typedef struct coordinates
 
 #define coordinates_equal(c1, c2) (c1.row == c2.row && c1.column == c2.column)
 #define out_of_bounds_up(c) c.row < 0
-#define out_of_bounds_down(g, c) c.row >= g.row_count
+// Ensure that c.row has an unsigned value before using this macro
+#define out_of_bounds_down(g, c) (unsigned int)c.row >= g.row_count
 #define out_of_bounds_left(c) c.column < 0
-#define out_of_bounds_right(g, c) c.column >= g.column_count
+// Ensure that c.column has an unsigned value before using this macro
+#define out_of_bounds_right(g, c) (unsigned int)c.column >= g.column_count
 #define out_of_bounds(g, c) (out_of_bounds_up(c) || out_of_bounds_down(g, c) || out_of_bounds_left(c) || out_of_bounds_right(g, c))
 #define in_bounds(g, c) !out_of_bounds(g, c)
 #define grid_access(g, c) g.grid_array[(c.row * g.column_count) + c.column]

@@ -5,9 +5,8 @@
 #include "run_solver.h"
 #include "solvers.h"
 
-solver_status run_solver(int n, char *buffer, size_t buffer_size, double *time_taken)
+solver_status run_solver(unsigned int n, char *buffer, size_t buffer_size, double *time_taken)
 {
-    n--;
     if (n >= solvers_size)
     {
         return solver_not_found;

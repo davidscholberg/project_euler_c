@@ -54,7 +54,7 @@ bool solve0014(char *buffer, size_t buffer_size)
             sequence_number = next_collatz_number(sequence_number);
             sequence_length++;
         }
-        for (int i = 0; i < sequence_buffer_index; i++)
+        for (int i = 0; (unsigned int)i < sequence_buffer_index; i++)
         {
             if (sequence_buffer[i] < sequence_length_cache_size)
             {
@@ -63,7 +63,7 @@ bool solve0014(char *buffer, size_t buffer_size)
         }
     }
     int chars_written = snprintf(buffer, buffer_size, "%d", target_starting_number);
-    return_status = chars_written >= 0 && chars_written < buffer_size;
+    return_status = chars_written >= 0 && (unsigned int)chars_written < buffer_size;
 cleanup:
     free(sequence_buffer);
     free(sequence_length_cache);

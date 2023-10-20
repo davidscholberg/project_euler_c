@@ -17,6 +17,10 @@
 // copy and return the first 10 digits of that string.
 bool solve0013(char *buffer, size_t buffer_size)
 {
+    if (buffer_size < needed_digit_count + 1)
+    {
+        return false;
+    }
     char *big_numbers[] = {
         "37107287533902102798797998220837590246510135740250",
         "46376937677490009712648124896970078050417018260538",
@@ -124,7 +128,7 @@ bool solve0013(char *buffer, size_t buffer_size)
     mpz_t sum;
     mpz_init(addend);
     mpz_init(sum);
-    for (int i = 0; i < big_number_count; i++)
+    for (int i = 0; (unsigned int)i < big_number_count; i++)
     {
         int status = mpz_set_str(addend, big_numbers[i], number_base);
         if (status == -1)
